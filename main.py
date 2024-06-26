@@ -1,11 +1,7 @@
-from calendar import month
 import csv
 import datetime
-from sqlite3 import Date
+from math import e
 from time import sleep
-
-from matplotlib.hatch import HorizontalHatch
-from numpy import block
 
 # Dicionário para armazenar os registros de ponto
 registros_ponto = {}
@@ -144,7 +140,7 @@ try:
 
     montaArquivoConfig()
     lerArquivoConfig()
-except:
+except(e):
     lerArquivoConfig()
 
 while True:
