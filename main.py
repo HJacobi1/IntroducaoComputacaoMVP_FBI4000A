@@ -133,7 +133,9 @@ def realiza_acao_um():
 
 
 # Menu principal
-print("=========================")
+print("==========================")
+print(" ----- HoraCerta.py ----- ")
+print("==========================")
 try:
     arqConfig = open("config.dat","x")
     arqConfig.close()
