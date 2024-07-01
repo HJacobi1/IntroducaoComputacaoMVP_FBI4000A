@@ -162,4 +162,5 @@ cython_debug/
 #.idea/
 .vscode/launch.json
 config.dat
-ponto_10.csv
+notas.txt
+*.csv
