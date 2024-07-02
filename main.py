@@ -1,6 +1,5 @@
 import csv
 from datetime import datetime
-from math import e
 from time import sleep
 from pathlib import Path
 
@@ -92,6 +91,8 @@ def consultar_ponto_completo(funcionario_id):
         total_diferenca *= -1
         devido_extra = "extras"
 
+    total_diferenca = int(total_diferenca)
+
     print(f"Diferença final: {total_diferenca//60:02}:{total_diferenca%60:02} {devido_extra}")
     print("--------------------------")    
     print()
@@ -120,7 +121,7 @@ def imprime_saldo_dia(minutos_dia, diferenca_minutos):
     else:
         print(f"Carga horária normal: {carga_horaria:02}h")        
         if diferenca_minutos == 0:
-            print(f"Carga horária cumprida.")
+            print("Carga horária cumprida.")
         elif diferenca_minutos > 0:
             print(f"São devidas {(diferenca_minutos//60):02}:{(diferenca_minutos%60):02}!")
         else:
